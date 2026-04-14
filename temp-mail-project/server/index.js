@@ -23,7 +23,7 @@ app.proxy = true;
 
 // CORS
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:5173',
+  origin: process.env.CLIENT_URL || 'http://localhost:3001',
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
@@ -67,7 +67,7 @@ const publicPath = path.join(__dirname, '../client/dist');
 if (fs.existsSync(publicPath)) {
   const serve = require('koa-static');
   app.use(serve(publicPath));
-  
+
   // SPA 回退路由
   const historyApiFallback = require('koa2-connect-history-api-fallback');
   app.use(historyApiFallback({
@@ -81,7 +81,7 @@ const PORT = config.PORT;
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
-  
+
   // 启动邮件轮询服务
   emailService.startPolling();
 });
