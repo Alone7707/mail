@@ -1,0 +1,39 @@
+```
+# Dependencies
+node_modules/
+
+# Database
+temp-mail-project/server/db/tempmail.db
+
+# Environment
+.env
+.env.local
+*.env.*
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# Editors
+.vscode/
+.idea/
+
+# Python (if applicable)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Build outputs
+dist/
+build/
+coverage/
+htmlcov/
+*.out
+
+# OS generated files
+.DS_Store
+Thumbs.db
+```
