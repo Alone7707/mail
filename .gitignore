@@ -2,73 +2,38 @@
 # Dependencies
 node_modules/
 
-# Build outputs
-dist/
-build/
-coverage/
-htmlcov/
+# Database
+temp-mail-project/server/db/tempmail.db
 
 # Environment
 .env
 .env.local
 *.env.*
 
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-env/
-venv/
-.venv/
-pip-log.txt
-pip-delete-this-directory.txt
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.log
-*.tmp
-*.swp
-*.swo
-.DS_Store
-Thumbs.db
-
-# Editors
-.vscode/
-.idea/
-
-# MyPy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pytest
-.pytest_cache/
-
-# Coverage
-.coverage
-htmlcov/
-
 # Logs
 *.log
 
 # Temporary files
 *.tmp
-*~
-```
 
-Wait, I need to reconsider this. Looking at the actual changes:
+# Editors
+.vscode/
+.idea/
 
-Added files: ['temp-mail-project/client/src/App.vue', 'temp-mail-project/client/vite.config.js']
-Modified files: ['README.md', 'temp-mail-project/client/package.json']
+# Python (if applicable)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
 
-These are all source files (.vue, .js, .md, .json) and there are no build artifacts, dependencies, or temporary files in the changes. According to rule #6, if the change list contains ONLY source or config files and NO build artifacts, dependencies, or temp files, I should output an EMPTY .gitignore.
+# Build outputs
+dist/
+build/
+coverage/
+htmlcov/
+*.out
 
-```
-
+# OS generated files
+.DS_Store
+Thumbs.db
 ```
